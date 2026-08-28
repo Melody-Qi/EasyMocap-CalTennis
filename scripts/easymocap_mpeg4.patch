@@ -1,0 +1,14 @@
+diff --git a/apps/demo/mv1p.py b/apps/demo/mv1p.py
+index e501264..bfc0000 100644
+--- a/apps/demo/mv1p.py
++++ b/apps/demo/mv1p.py
+@@ -21,7 +21,8 @@ def compose_video(img_dir, video_path, fps=30):
+         'ffmpeg', '-y',
+         '-framerate', str(fps),
+         '-i', pattern,
+-        '-c:v', 'libx264',
++        '-c:v', 'mpeg4',
++        '-q:v', '3',
+         '-pix_fmt', 'yuv420p',
+         video_path
+     ]

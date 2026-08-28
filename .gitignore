@@ -1,0 +1,24 @@
+# 不入库：视频 / 模型权重 / 实验输出（大模型、大文件）
+*.mp4
+*.avi
+*.png
+*.jpg
+*.npy
+*.npz
+*.pt
+*.pth
+*.onnx
+
+# 实验产物目录（在集群上生成，不纳入版本管理）
+keypoints3d/
+smpl_all/
+repro_*/
+repro_vid/
+output/
+data/
+results/
+logs/
+
+# 本地环境
+.workbuddy/
+*.log
