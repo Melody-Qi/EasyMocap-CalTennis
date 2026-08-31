@@ -147,3 +147,30 @@ checkpoints/
 # Editor / linter caches
 .ruff_cache/
 .pyright/
+
+# ===== CalTennis: 原始数据与大型二进制（不入库） =====
+# 采集的原始视频（42 GB，位于 ~/EasyMocap/BaiduNetdiskDownload）
+BaiduNetdiskDownload/
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.flv
+*.wmv
+*.webm
+
+# 点云 / 激光雷达原始数据
+*.pcap
+*.pcd
+*.ply
+*.las
+*.laz
+*.bag
+
+# 大型数组与模型权重
+*.npy
+*.npz
+*.pkl
+*.bin
+# 例外：上游 EasyMocap 自带的 GMM 先验（已入库，勿忽略）
+!easymocap/multistage/gmm_08.pkl
