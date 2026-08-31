@@ -57,3 +57,36 @@
 - LOW 侧相机约 13% 帧漏检（遮挡），目前靠时序插值；可上全局 K=2 聚类给持久 ID + Kalman 提升鲁棒性。
 - CalTennis 官方数据集无 3D 标签，本项目产出的是**可用的伪 GT 生成流程**，评测只能靠跨视角一致性。
 - 下一步方向：球与人体的 LiDAR + camera 融合（LiDAR 主动测距拿 metric 3D，绕开多视角 2D 关联难题）。`BaiduNetdiskDownload/2025-10-22 网球激光雷达采集 + 分析` 是该方向的素材，但**其中只有 RSView 上位机录屏，没有原始 `.pcap` 点云**，需向采集者索取。
+
+## 代码同步到 GitHub
+
+仓库地址：<https://github.com/Melody-Qi/EasyMocap-CalTennis>
+
+集群上没有（也不建议存放）GitHub 凭据，因此同步走 `git bundle` 单文件中转：
+
+```bash
+# 1) 集群：打包全部分支
+ssh cs286 "cd ~/EasyMocap && git bundle create /tmp/em.bundle --all"
+
+# 2) 拉到本地，增量更新本地镜像后推送
+scp cs286:/tmp/em.bundle ./em.bundle
+cd <本地镜像目录>/EasyMocap-CalTennis
+git fetch ../em.bundle master:master
+git push origin master:main
+
+# 3) 清理
+ssh cs286 "rm -f /tmp/em.bundle" && rm -f ./em.bundle
+```
+
+注意事项：
+
+- **不要直接 `git clone cs286:~/EasyMocap`** —— 实测会卡死（跑几分钟只写出 1 MB）。一律走 bundle。
+- **不要把仓库克隆到 WPS 云盘等同步目录** —— 上千个文件会触发实时同步，慢到像卡死。
+- 推送前确认没有大文件被误纳入：
+
+  ```bash
+  git ls-tree -r -l master | awk '{print $4, $5}' | sort -rn | head -5
+  ```
+
+  GitHub 单文件上限 100 MB（超过 50 MB 会警告）。
+- 集群只保留上游 remote（`upstream` → zju3dv/EasyMocap），不配置 `origin`，避免误推。
