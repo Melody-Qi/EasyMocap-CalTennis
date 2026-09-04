@@ -174,3 +174,19 @@ BaiduNetdiskDownload/
 *.bin
 # 例外：上游 EasyMocap 自带的 GMM 先验（已入库，勿忽略）
 !easymocap/multistage/gmm_08.pkl
+
+
+# ============================================================
+# CalTennis: baidu_mocap pilot 工作区
+# ============================================================
+# 抽帧图像（3 相机 × 900 帧 JPEG）与中间可视化产物不入库
+baidu_mocap_qiyt_pilot/work/images/
+baidu_mocap_qiyt_pilot/work/videos_15_30s/
+baidu_mocap_qiyt_pilot/work/*.jpg
+baidu_mocap_qiyt_pilot/work/*.png
+baidu_mocap_qiyt_pilot/work/*.mp4
+
+# 学长（wuzhx12022 / 组 mayuexin）的目录：非本人作品，
+# 且含组内私有路径（/inspurfs/group/mayuexin/...），
+# 未获授权前不发布到公开仓库。
+baidu_mocap_20260831/

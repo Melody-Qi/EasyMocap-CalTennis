@@ -1,0 +1,75 @@
+{
+  "config": {
+    "source_root": "/public/home/CS286/qiyt2023-CS286/EasyMocap/BaiduNetdiskDownload",
+    "clip": "2025-07-08 上体采集数据 3相机 4K 运动员/热身",
+    "cameras": [
+      "tennis_camera_1",
+      "tennis_camera_2",
+      "tennis_camera_3"
+    ],
+    "output_root": "baidu_mocap_qiyt_pilot/work",
+    "source_fps": 60,
+    "output_width": 1920,
+    "output_height": 1080,
+    "output_fps": 30,
+    "start_frame": 0,
+    "max_frames": 900,
+    "jpeg_quality": 95,
+    "intrinsics_candidate": {
+      "fx": 1510.8012,
+      "fy": 1531.6288,
+      "cx": 934.5256,
+      "cy": 509.4314,
+      "distortion": [
+        -0.2625051,
+        0.5931349,
+        0.0040846,
+        0.0017819,
+        0.0
+      ]
+    }
+  },
+  "config_path": "/public/home/CS286/qiyt2023-CS286/EasyMocap/baidu_mocap_qiyt_pilot/config.json",
+  "clip_root": "/public/home/CS286/qiyt2023-CS286/EasyMocap/BaiduNetdiskDownload/2025-07-08 上体采集数据 3相机 4K 运动员/热身",
+  "output_root": "/public/home/CS286/qiyt2023-CS286/EasyMocap/baidu_mocap_qiyt_pilot/work",
+  "sources": {
+    "tennis_camera_1": "/public/home/CS286/qiyt2023-CS286/EasyMocap/BaiduNetdiskDownload/2025-07-08 上体采集数据 3相机 4K 运动员/热身/tennis_camera_1.mp4",
+    "tennis_camera_2": "/public/home/CS286/qiyt2023-CS286/EasyMocap/BaiduNetdiskDownload/2025-07-08 上体采集数据 3相机 4K 运动员/热身/tennis_camera_2.mp4",
+    "tennis_camera_3": "/public/home/CS286/qiyt2023-CS286/EasyMocap/BaiduNetdiskDownload/2025-07-08 上体采集数据 3相机 4K 运动员/热身/tennis_camera_3.mp4"
+  },
+  "source_metadata": {
+    "tennis_camera_1": {
+      "codec_name": "h264",
+      "width": 3840,
+      "height": 2160,
+      "r_frame_rate": "60/1",
+      "avg_frame_rate": "60/1",
+      "nb_frames": "23040",
+      "duration": "384.000000"
+    },
+    "tennis_camera_2": {
+      "codec_name": "h264",
+      "width": 3840,
+      "height": 2160,
+      "r_frame_rate": "60/1",
+      "avg_frame_rate": "60/1",
+      "nb_frames": "23040",
+      "duration": "384.000000"
+    },
+    "tennis_camera_3": {
+      "codec_name": "h264",
+      "width": 3840,
+      "height": 2160,
+      "r_frame_rate": "60/1",
+      "avg_frame_rate": "60/1",
+      "nb_frames": "23040",
+      "duration": "384.000000"
+    }
+  },
+  "extracted_frame_counts": {
+    "tennis_camera_1": 900,
+    "tennis_camera_2": 900,
+    "tennis_camera_3": 900
+  },
+  "sampling_note": "All cameras use the same source start_frame and output fps; no per-camera temporal offset was applied."
+}

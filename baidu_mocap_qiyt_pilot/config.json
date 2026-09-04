@@ -1,0 +1,30 @@
+{
+  "source_root": "/public/home/CS286/qiyt2023-CS286/EasyMocap/BaiduNetdiskDownload",
+  "clip": "2025-07-08 上体采集数据 3相机 4K 运动员/热身",
+  "cameras": [
+    "tennis_camera_1",
+    "tennis_camera_2",
+    "tennis_camera_3"
+  ],
+  "output_root": "baidu_mocap_qiyt_pilot/work",
+  "source_fps": 60,
+  "output_width": 1920,
+  "output_height": 1080,
+  "output_fps": 30,
+  "start_frame": 0,
+  "max_frames": 900,
+  "jpeg_quality": 95,
+  "intrinsics_candidate": {
+    "fx": 1510.8012,
+    "fy": 1531.6288,
+    "cx": 934.5256,
+    "cy": 509.4314,
+    "distortion": [
+      -0.2625051,
+      0.5931349,
+      0.0040846,
+      0.0017819,
+      0.0
+    ]
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "per_camera": {
+    "tennis_camera_1": {
+      "frames": 450,
+      "detected_frames": 450,
+      "detected_ratio": 1.0,
+      "bbox_height_px_mean": 174.8,
+      "bbox_height_px_min": 149.2,
+      "bbox_height_px_max": 186.7,
+      "vitpose_conf_mean": 0.871,
+      "kp_ok_frames": 450,
+      "kp_ok_ratio": 1.0,
+      "dist_to_cam_m_mean": 20.2,
+      "dist_to_cam_m_range": [
+        19.19,
+        23.69
+      ],
+      "world_path_len_m": 9.58,
+      "speed_mps_mean": 0.64,
+      "speed_mps_p95": 1.752,
+      "speed_mps_max": 1.96,
+      "jitter_mps2_mean": 2.29,
+      "jitter_mps2_p95": 8.24,
+      "static_conf_mean": 0.228,
+      "K_est_fx": 2202.9,
+      "K_est_fy": 2202.9,
+      "K_est_cx": 960.0,
+      "K_est_cy": 540.0
+    },
+    "tennis_camera_2": {
+      "frames": 450,
+      "detected_frames": 450,
+      "detected_ratio": 1.0,
+      "bbox_height_px_mean": 161.3,
+      "bbox_height_px_min": 127.5,
+      "bbox_height_px_max": 176.7,
+      "vitpose_conf_mean": 0.86,
+      "kp_ok_frames": 450,
+      "kp_ok_ratio": 1.0,
+      "dist_to_cam_m_mean": 21.48,
+      "dist_to_cam_m_range": [
+        19.36,
+        27.54
+      ],
+      "world_path_len_m": 10.87,
+      "speed_mps_mean": 0.726,
+      "speed_mps_p95": 1.851,
+      "speed_mps_max": 2.127,
+      "jitter_mps2_mean": 3.47,
+      "jitter_mps2_p95": 12.02,
+      "static_conf_mean": 0.262,
+      "K_est_fx": 2202.9,
+      "K_est_fy": 2202.9,
+      "K_est_cx": 960.0,
+      "K_est_cy": 540.0
+    },
+    "tennis_camera_3": {
+      "frames": 450,
+      "detected_frames": 450,
+      "detected_ratio": 1.0,
+      "bbox_height_px_mean": 233.8,
+      "bbox_height_px_min": 180.0,
+      "bbox_height_px_max": 258.1,
+      "vitpose_conf_mean": 0.835,
+      "kp_ok_frames": 450,
+      "kp_ok_ratio": 1.0,
+      "dist_to_cam_m_mean": 16.1,
+      "dist_to_cam_m_range": [
+        14.48,
+        20.18
+      ],
+      "world_path_len_m": 11.02,
+      "speed_mps_mean": 0.736,
+      "speed_mps_p95": 1.498,
+      "speed_mps_max": 1.877,
+      "jitter_mps2_mean": 3.07,
+      "jitter_mps2_p95": 9.01,
+      "static_conf_mean": 0.307,
+      "K_est_fx": 2202.9,
+      "K_est_fy": 2202.9,
+      "K_est_cx": 960.0,
+      "K_est_cy": 540.0
+    }
+  },
+  "sync": {
+    "tennis_camera_1_vs_tennis_camera_2": {
+      "best_lag": -1,
+      "best_r": 0.744,
+      "r_at_zero": 0.744,
+      "peak_prominence": 0.001,
+      "top5_flatness": 0.0063,
+      "reliable": false
+    },
+    "tennis_camera_1_vs_tennis_camera_3": {
+      "best_lag": 2,
+      "best_r": 0.72,
+      "r_at_zero": 0.711,
+      "peak_prominence": 0.009,
+      "top5_flatness": 0.0042,
+      "reliable": false
+    }
+  }
+}
