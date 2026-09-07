@@ -182,6 +182,9 @@ BaiduNetdiskDownload/
 # 抽帧图像（3 相机 × 900 帧 JPEG）与中间可视化产物不入库
 baidu_mocap_qiyt_pilot/work/images/
 baidu_mocap_qiyt_pilot/work/videos_15_30s/
+baidu_mocap_qiyt_pilot/work/videos_*/
+baidu_mocap_qiyt_pilot/work/calib_frames/
+baidu_mocap_qiyt_pilot/work/source_review/
 baidu_mocap_qiyt_pilot/work/*.jpg
 baidu_mocap_qiyt_pilot/work/*.png
 baidu_mocap_qiyt_pilot/work/*.mp4
