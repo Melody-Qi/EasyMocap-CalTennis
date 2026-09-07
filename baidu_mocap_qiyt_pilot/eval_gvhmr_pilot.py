@@ -3,7 +3,7 @@
 对每路输出检查三组指标：
   1. 检测与 2D 关键点质量（人有没有检到、ViTPose 置信度、人在画面里多大）
   2. SMPL 结果质量（世界坐标轨迹、速度、抖动、静态接触置信度）
-  3. 跨视角同步性（用人体速度曲线做互相关，比整帧差分可靠得多）
+  3. 跨视角同步性诊断（人体速度曲线互相关仅作线索，峰值不突出时拒绝下结论）
 
 用法:
     python eval_gvhmr_pilot.py --root <GVHMR/outputs> \
@@ -139,7 +139,12 @@ def main():
         }
 
     print("=" * 78)
-    print("单目 GVHMR 质量（每路 15 秒 / 450 帧）")
+    frame_counts = sorted({r["frames"] for r in report.values()})
+    if len(frame_counts) == 1:
+        frames_text = f"每路 {frame_counts[0] / args.fps:.1f} 秒 / {frame_counts[0]} 帧"
+    else:
+        frames_text = "各路帧数不一致: " + ", ".join(map(str, frame_counts))
+    print(f"单目 GVHMR 质量（{frames_text}）")
     print("=" * 78)
     hdr = f"{'camera':<18}{'检出率':>8}{'bbox高(px)':>12}{'ViTPose置信':>12}{'关键点可用':>11}{'速度m/s':>9}{'抖动m/s²':>10}{'距相机m':>9}"
     print(hdr)
