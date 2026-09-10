@@ -193,3 +193,18 @@ baidu_mocap_qiyt_pilot/work/*.mp4
 # 且含组内私有路径（/inspurfs/group/mayuexin/...），
 # 未获授权前不发布到公开仓库。
 baidu_mocap_20260831/
+
+
+# ============================================================
+# CalTennis: 学长（wuzhx12022）codex 生成的球场标注工具链
+# ============================================================
+# 来源：由学长 codex 会话生成（owner=wuzhx12022，2026-09-09），
+# 人工浏览器点击数据 raw_court_points.json 落在 qiyt 账号下。
+# 与 baidu_mocap_20260831/ 同理，未获授权前不发布到公开仓库。
+# 且这 4 个文件依赖被忽略的 baidu_mocap_20260831/work/ 目录，
+# 单独入库也跑不通。
+court_review.html
+court_review_v2.html
+court_label_v3.html
+make_label_html.py
+raw_court_points.json
